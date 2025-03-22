@@ -71,12 +71,12 @@ where x₁ and x₂ are the two dimensions of the input space. This equation def
 
 ![Figure 1: ](images/Figure2.png)
 
-For this toy example, the two classes overlap and cannot be perfectly seperated by a linear decision boundary.
+
 
 ---
 
 ## 🚀 Perceptron limitations and the first AI winter
-The linear decision boundary is a key limitation of the Perceptron. It also uses a step activation function, which is non-differentiable and limits its use in more advanced gradient-based optimization methods. The model is inherently shallow (a single-layer network) and cannot learn complex patterns. Finally, it is sensitive to the choice of learning rate and initial weights, which may affect convergence.
+A first limitation for the Perceptron is its use of a  linear decision boundary. As shwon in the toy example above, a linear decision boundary is unable to perfectly seperate the two overlapping classes. The Perceptron also uses a step activation function, which is non-differentiable and limits its use in more advanced gradient-based optimization methods. The model is inherently shallow (a single-layer network) and cannot learn complex patterns. Finally, it is sensitive to the choice of learning rate and initial weights, which may affect convergence.
 
 These limitations were highlighted by Minsky and Papert (1969), contributing to a temporary decline in neural network research — sometimes referred to as the first "AI Winter."
 
@@ -87,3 +87,4 @@ These limitations were highlighted by Minsky and Papert (1969), contributing to 
 
 Rosenblatt, F. (1958). The perceptron: A probabilistic model for information storage and organization in the brain. *Psychological Review, 65*(6), 386–408. https://doi.org/10.1037/h0042519
 
+Minsky, M., & Papert, S. (1969). Perceptrons: An Introduction to Computational Geometry. Cambridge, MA: MIT Press.
