@@ -48,8 +48,10 @@ For  this example, the Perceptron was initialized for 2-dimensional input vector
 
 After initializing the Perceptron object, training is initialized using P.train(D, L) where D is the previously defined dataset and L the associated labels. During the training, the Perceptron loops through all 2000 samples 500 times. For each sample, an error is computed, and the weights are adjusted accordingly:
 
+<pre>
 self.weights[0] += learning_rate * error       # Bias update
 self.weights[1:] += learning_rate * error * x  # Feature weights update
+</pre>
 
 After training is completed, test accuracy is evaluated by counting the ratio of succesfully classified data samples: 
 
@@ -63,7 +65,14 @@ where x₁ and x₂ are the two dimensions of the input space. This equation def
 
 ![Figure 1: ](images/Figure2.png)
 
-For this toy example, the two classes overlap and cannot be perfectly seperated by a linear decision boundary - a key limitation of the Perceptron approach. 
+For this toy example, the two classes overlap and cannot be perfectly seperated by a linear decision boundary.
+
+---
+
+## 🚀 Perceptron limitations and the first AI winter
+The linear decision boundary is a key limitation of the Perceptron. It also uses a step activation function, which is non-differentiable and limits its use in more advanced gradient-based optimization methods. The model is inherently shallow (a single-layer network) and cannot learn complex patterns. Finally, it is sensitive to the choice of learning rate and initial weights, which may affect convergence.
+
+These limitations were highlighted by Minsky and Papert (1969), contributing to a temporary decline in neural network research — sometimes referred to as the first "AI Winter."
 
 
 ---
