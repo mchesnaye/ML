@@ -38,7 +38,7 @@ where b is the bias and η is the learning rate.
 
 ---
 
-## 🚀 Python implementation
+## 🐍 Python implementation
 
 Classification Problem: We generate two classes of data. Class 1 is represented by 2-dimensional features, randomly sampled from a normal and a uniform distribution. Class 2 is represented by 2-dimensional features, randomly sampled from an exponential and chi-squared distribution. Both classes are arbitrarily offset by a value of 3. Training data comprises 1000 samples from each class. Note that for this toy example, classes are not perfectly linearly seperable. The training data is illustrated in the figure below. 
 
@@ -78,7 +78,7 @@ where x₁ and x₂ are the two dimensions of the input space. This equation def
 
 ---
 
-## 🚀 Perceptron limitations and the first AI winter
+## Perceptron limitations and the first AI winter
 A first limitation for the Perceptron is its use of a  linear decision boundary. As shwon in the toy example above, a linear decision boundary is unable to perfectly seperate the two overlapping classes. The Perceptron also uses a step activation function, which is non-differentiable and limits its use in more advanced gradient-based optimization methods. The model is inherently shallow (a single-layer network) and cannot learn complex patterns. Finally, it is sensitive to the choice of learning rate and initial weights, which may affect convergence.
 
 These limitations were highlighted by Minsky and Papert (1969), contributing to a temporary decline in neural network research — sometimes referred to as the first "AI Winter."
