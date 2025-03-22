@@ -36,9 +36,34 @@ where b is the bias and η is the learning rate.
 
 ## 🚀 Python implementation
 
-Classification Problem: We generate two classes of data. Class 1 is represented by 2-dimensional features, randomly sampled from a normal and a uniform distribution. Class 2 is represented by 2-dimensional features, randomly sampled from an exponential and chi-squared distribution. Both classes are arbitrarily offset by a value of 3. Training data comprises 1000 samples from each class. Note that for this toy example, classes are not perfectly linearly seperable. 
+Classification Problem: We generate two classes of data. Class 1 is represented by 2-dimensional features, randomly sampled from a normal and a uniform distribution. Class 2 is represented by 2-dimensional features, randomly sampled from an exponential and chi-squared distribution. Both classes are arbitrarily offset by a value of 3. Training data comprises 1000 samples from each class. Note that for this toy example, classes are not perfectly linearly seperable. The training data is illustrated in the figure below. 
 
 ![Figure 1: ](images/Figure1.png)
+
+In the code "Perceptron.py", a Perceptron object is initialized within the __main__ function. The Perceptron class contains all functionality for training and prediction, and is initialized using: 
+
+P = Perceptron(input_size=2, learning_rate=0.0001, epochs=500)
+
+For  this example, the Perceptron was initialized for 2-dimensional input vector, a learning rate of η = 0.0001 andnusing 500 training iterations. The number of training iterations, denoted by epochs, specifies how many times the procedure loops through the full dataset (clarified below). These values are initialized within the __init__ function of the Perceptron class. Note that the weights are initially set to zero. 
+
+After initializing the Perceptron object, training is initialized using P.train(D, L) where D is the previously defined dataset and L the associated labels. During the training, the Perceptron loops through all 2000 samples 500 times. For each sample, an error is computed, and the weights are adjusted accordingly:
+
+self.weights[0] += learning_rate * error       # Bias update
+self.weights[1:] += learning_rate * error * x  # Feature weights update
+
+After training is completed, test accuracy is evaluated by counting the ratio of succesfully classified data samples: 
+
+accuracy = correct / len(D) * 100
+
+We can now also visualize the optimized decision boundary. In 2D, the perceptron this is computed as: 
+
+x₂ = -(w₀ + w₁·x₁) / w₂
+
+where x₁ and x₂ are the two dimensions of the input space. This equation defines a straight line with data points lieing above the line classified as 1 and those below the line as 0. 
+
+![Figure 1: ](images/Figure2.png)
+
+For this toy example, the two classes overlap and cannot be perfectly seperated by a linear decision boundary - a key limitation of the Perceptron approach. 
 
 
 ---
