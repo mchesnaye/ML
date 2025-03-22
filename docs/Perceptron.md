@@ -4,42 +4,44 @@ The perceptron is one of the earliest and most fundamental building blocks of mo
 
 ---
 
-## How the Perceptron Works
+## The algorithm
 
-The Perceptron is a simple learning algorithm used for binary classification tasks. It attempts to find a linear decision boundary that separates the two classes by learning an n-dimensional set of weights:
-
-w = [w₁, w₂, ..., wₙ]
-
-along with a bias term b. Each weight is linked to an input feature, which is also n-dimensional:
+The Perceptron is a simple supervised learning algorithm for binary classification tasks. It attempts to find a linear decision boundary that separates two classes by learning a set of parameters (denoted by weights) using training data with pre-assigned class labels - hence supervised learning. The input to the Perceptronis an n-dimensional vector: 
 
 x = [x₁, x₂, ..., xₙ]
 
-Next, a weighted sum is computed:
+where each input is connected to the Perceptron via a weight. The vector of weights is thus also n-dimensional: 
+
+
+w = [w₁, w₂, ..., wₙ]
+
+with an additional weight, called the bias, not being linked to any inputs. Next, a weighted sum is computed:
 
 s = w · x + b
 
-To arrive at an output, the s is then passed through an activation function, such as a step function: 
+which is passed through an activation function to arrive at a prediction. A commonly used activation function is the step function: 
 
 ŷ = 1 if s > 0 else 0
 
-which thus assigns label 0 (class 1) is s is negative, else label 1 (class 2) is assigned. 
+which assigns label 0 (class 1) if s is negative, else it assigns label 1 (class 2). 
 
-The perceptron learns by iteratively updating the weights based on the error, computed as ε = y - ŷ. The weights are then adjusted as:
+Learning in the Perceptron involves iteratively updating the weights based on the error. Specifically, the error is computed as ε = y - ŷ, and the are adjusted using:
 
 wᵢ ← wᵢ + η × ε × xᵢ
 b ← b + η × ε
 
-where η is the learning rate. 
+where b is the bias and η is the learning rate. 
 
 ---
 
-## 🚀 What is a Perceptron?
+## 🚀 Python implementation
 
-A *perceptron* is one of the simplest types of artificial neural networks, used for binary classification tasks. It learns a linear decision boundary between two classes by adjusting weights based on classification errors.
+Classification Problem: We generate two classes of data. Class 1 is represented by 2-dimensional features, randomly sampled from a normal and a uniform distribution. Class 2 is represented by 2-dimensional features, randomly sampled from an exponential and chi-squared distribution. Both classes are arbitrarily offset by a value of 3. Training data comprises 1000 samples from each class. Note that for this toy example, classes are not perfectly linearly seperable. 
+
+![Figure 1: ](images/Figure1.png)
+
 
 ---
-
-
 
 ## 📚 References
 
