@@ -17,7 +17,7 @@ w = [w₁, w₂, ..., wₙ]
 
 with an additional weight, called the bias, not being linked to any inputs. An ai-generated example for a 3-dimensional case is shown below: 
 
-![Figure: ](images/Figure4.png)
+<img src="images/Figure4.png" alt="" width="500"/>
 
 Next, a weighted sum is computed:
 
