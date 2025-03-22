@@ -15,7 +15,11 @@ where each input is connected to the Perceptron via a weight. The vector of weig
 
 w = [w₁, w₂, ..., wₙ]
 
-with an additional weight, called the bias, not being linked to any inputs. Next, a weighted sum is computed:
+with an additional weight, called the bias, not being linked to any inputs. An ai-generated example for a 3-dimensional case is shown below: 
+
+![Figure 3: ](images/Figure3.png)
+
+Next, a weighted sum is computed:
 
 s = w · x + b
 
