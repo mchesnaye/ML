@@ -4,13 +4,32 @@ The perceptron is one of the earliest and most fundamental building blocks of mo
 
 ---
 
-## 🧮 How the Perceptron Works
+## How the Perceptron Works
 
-The Perceptron is a simple learning algorithm used for binary classification tasks. It attempts to find a linear decision boundary that separates the two classes by learning an n+1-dimensional set of weights. Each weight is connected to an input feauture, which is also n-dimensional. The input features are denoted by:
+The Perceptron is a simple learning algorithm used for binary classification tasks. It attempts to find a linear decision boundary that separates the two classes by learning an n-dimensional set of weights:
+
+w = [w₁, w₂, ..., wₙ]
+
+along with a bias term b. Each weight is linked to an input feature, which is also n-dimensional:
 
 x = [x₁, x₂, ..., xₙ]
 
+Next, a weighted sum is computed:
 
+s = w · x + b
+
+To arrive at an output, the s is then passed through an activation function, such as a step function: 
+
+ŷ = 1 if s > 0 else 0
+
+which thus assigns label 0 (class 1) is s is negative, else label 1 (class 2) is assigned. 
+
+The perceptron learns by iteratively updating the weights based on the error, computed as ε = y - ŷ. The weights are then adjusted as:
+
+wᵢ ← wᵢ + η × ε × xᵢ
+b ← b + η × ε
+
+where η is the learning rate. 
 
 ---
 
