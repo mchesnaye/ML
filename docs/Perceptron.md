@@ -78,7 +78,7 @@ where x₁ and x₂ are the two dimensions of the input space. This equation def
 
 ---
 
-## Perceptron limitations and the first AI winter
+## ❄️🤖 Perceptron limitations and the first AI winter
 A first limitation for the Perceptron is its use of a  linear decision boundary. As shwon in the toy example above, a linear decision boundary is unable to perfectly seperate the two overlapping classes. The Perceptron also uses a step activation function, which is non-differentiable and limits its use in more advanced gradient-based optimization methods. The model is inherently shallow (a single-layer network) and cannot learn complex patterns. Finally, it is sensitive to the choice of learning rate and initial weights, which may affect convergence.
 
 These limitations were highlighted by Minsky and Papert (1969), contributing to a temporary decline in neural network research — sometimes referred to as the first "AI Winter."
