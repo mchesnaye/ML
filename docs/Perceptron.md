@@ -42,7 +42,7 @@ where b is the bias and η is the learning rate.
 
 Classification Problem: We generate two classes of data. Class 1 is represented by 2-dimensional features, randomly sampled from a normal and a uniform distribution. Class 2 is represented by 2-dimensional features, randomly sampled from an exponential and chi-squared distribution. Both classes are arbitrarily offset by a value of 3. Training data comprises 1000 samples from each class. Note that for this toy example, classes are not perfectly linearly seperable. The training data is illustrated in the figure below. 
 
-![Figure 1: ](images/Figure1.png)
+<img src="images/Figure1.png" alt="" width="500"/>
 
 In the code "Perceptron.py", a Perceptron object is initialized within the __main__ function. The Perceptron class contains all functionality for training and prediction, and is initialized using: 
 
@@ -73,8 +73,7 @@ x₂ = -(w₀ + w₁·x₁) / w₂
 
 where x₁ and x₂ are the two dimensions of the input space. This equation defines a straight line with data points lieing above the line classified as 1 and those below the line as 0. 
 
-![Figure 1: ](images/Figure2.png)
-
+<img src="images/Figure2.png" alt="" width="500"/>
 
 
 ---
