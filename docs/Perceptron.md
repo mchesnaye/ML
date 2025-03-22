@@ -42,7 +42,9 @@ Classification Problem: We generate two classes of data. Class 1 is represented 
 
 In the code "Perceptron.py", a Perceptron object is initialized within the __main__ function. The Perceptron class contains all functionality for training and prediction, and is initialized using: 
 
+<pre>
 P = Perceptron(input_size=2, learning_rate=0.0001, epochs=500)
+</pre>
 
 For  this example, the Perceptron was initialized for 2-dimensional input vector, a learning rate of η = 0.0001 andnusing 500 training iterations. The number of training iterations, denoted by epochs, specifies how many times the procedure loops through the full dataset (clarified below). These values are initialized within the __init__ function of the Perceptron class. Note that the weights are initially set to zero. 
 
@@ -55,11 +57,15 @@ self.weights[1:] += learning_rate * error * x  # Feature weights update
 
 After training is completed, test accuracy is evaluated by counting the ratio of succesfully classified data samples: 
 
+<pre>
 accuracy = correct / len(D) * 100
+</pre>
 
 We can now also visualize the optimized decision boundary. In 2D, the perceptron this is computed as: 
 
+<pre>
 x₂ = -(w₀ + w₁·x₁) / w₂
+</pre>
 
 where x₁ and x₂ are the two dimensions of the input space. This equation defines a straight line with data points lieing above the line classified as 1 and those below the line as 0. 
 
