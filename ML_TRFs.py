@@ -23,7 +23,7 @@ SPow_array = np.array(SPow)
 NPow_array = np.array(NPow)
 Pho_arrays = [np.array(Pho) for Pho in [Pho1, Pho2, Pho3, Pho4, Pho5, Pho6]]
 
-SIIVal = [0.2, 0.7, 0.5, 0.6, 0.99]  # 5 values, one per column
+SIIVal = [99, 55.7, 18.1, 37.6, 87.5]  # 5 values, one per column
 
 # Stack the features
 num_rows, num_cols = p_array.shape  # should be (50, 5)
